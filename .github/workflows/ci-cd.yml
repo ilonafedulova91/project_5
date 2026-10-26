@@ -93,6 +93,9 @@ jobs:
           request_pty: true
           script: |
             set -e
+            whoami
+            id
+            sudo -n whoami
             cd ~/project_5
             git fetch origin main
             git checkout main

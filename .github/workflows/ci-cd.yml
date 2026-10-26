@@ -95,9 +95,8 @@ jobs:
             set -e
             whoami
             id
-            sudo -n whoami
             cd ~/project_5
             git fetch origin main
             git checkout main
             git pull --ff-only origin main
-            sudo -n docker compose up -d --build
+            docker compose up -d --build

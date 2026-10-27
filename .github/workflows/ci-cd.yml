@@ -95,7 +95,9 @@ jobs:
       - name: Validate Docker Compose configuration
         env:
           POSTGRES_PASSWORD: test-password
-        run: docker compose config --quiet
+        run: |
+          cp .env.template .env
+          docker compose config --quiet
 
       - name: Build application image
         uses: docker/build-push-action@v6
